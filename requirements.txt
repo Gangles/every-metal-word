@@ -1,0 +1,2 @@
+Pillow==2.6.1
+twython==3.2.0
