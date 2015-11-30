@@ -132,6 +132,7 @@ if __name__ == "__main__":
 	wait = timeToWait()
 	print "Wait " + str(wait) + " seconds for next tweet"
 	if wait > 10 * 60: sys.exit(0)
+	time.sleep(wait)
 
 	try:
 		# pick the next word in the dictionary
@@ -143,6 +144,8 @@ if __name__ == "__main__":
 		image_name = 'word.gif'
 		makeImage(word, index, image_name)
 		to_tweet = u"%s%s" % (word, getMetalEmoji(index))
+
+		# post the tweet
 		post_tweet(twitter, to_tweet, image_name)
 		sys.exit(0) # success!
 	except SystemExit as e:
