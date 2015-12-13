@@ -33,7 +33,7 @@ def getNextWord(file_name, index):
 		for i, word in enumerate(source_fh):
 			if i == index:
 				break
-		return word.strip()
+		return word.decode('utf8').strip()
 
 def post_tweet(twitter, to_tweet, image_name):
 	# post the string and the image to twitter
