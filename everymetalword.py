@@ -105,8 +105,8 @@ def getMetalFont(word, index, width=420):
 
 def makeImage(word, index, image_name):
 	# these fonts don't handle accents well
-	print "Making image for: %s" % word
-	word_safe = word.replace('é','e').replace('è','e').upper()
+	print u"Making image for: %s" % word
+	word_safe = word.replace(u'é',u'e').replace(u'è',u'e').upper()
 	font, size = getMetalFont(word_safe, index)
 
 	# draw the text as an image, save as a GIF
